@@ -1,0 +1,24 @@
+{% include 'header.html' %}
+{% load staticfiles %}
+
+			<div class="col-md-12" id="category_header">
+			    <div class="container-fluid">
+                                <h1 id="category_title">About and Contact Us</h1>
+                            </div>
+                        </div>
+			<div class="col-md-12" id="about_amaztv">
+			    <h1>About AMAZTV</h1>
+			</div>
+			<div class="col-md-6 col-sm-12 col-xs-12" id="team">
+			    <img src="{% static "img/maziyar_boustani.jpg" %}" class="img-circle">
+			    <a href="mailto:maziyar_b4@yahoo.com"><h2>Maziyar Boustani</h2></a>
+			    <p>web developer and designer</p>
+			</div>
+			<div class="col-md-6" id="team">
+			    <img src="{% static "img/june_lee.jpg" %}" class="img-circle">
+			    <a href="mailto:amaztvnetwork@gmail.com"><h2>June Lee</h2></a>
+			    <p>CEO of AMAZTV</p>
+			</div>
+			<a href="mailto:amaztvnetwork@gmail.com"><button type="button" class="btn btn-primary btn-lg btn-block" id="contact_button">Contact Us</button></a>
+
+{% include 'footer.html' %}

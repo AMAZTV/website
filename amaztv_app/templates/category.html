@@ -1,0 +1,48 @@
+
+
+{% include 'header.html' %}
+{% load template_tags %}
+                        {% if error %}
+                            <h1>{{ error }}</h1>
+                        {% else %}
+			<div class="container-fluid" id="category_header">
+			    <div class="container-fluid">
+                                <h1 id="category_title">{{ category }}</h1>
+                            </div>
+                        </div>
+                        <div class="container-fluid" id="post_container">
+                            {% for post in posts %}
+                                <div id='{{ post.id }}' style="padding-top: 30px;">
+                                <div class="container-fluid" id="post">
+                                    <div class="row" style="margin: 0px 0px 0px 0px;">
+                                        <div id="post_pub_date">{{ post.pub_date }}</div>
+                                        <div class="col-sm-12">
+                                            <h1 id="post_title">{{ post.title|no_single_quote }}</h1>
+                                        </div>
+                                        {%for each in post.embed_links %}
+                                            <div class="col-sm-12" id="post_embed_media">
+                                                <div>{{ each|safe }}</div>
+                                            </div>
+                                        {% endfor %}
+                                        {%for each in post.img_link %}
+                                            <div class="col-sm-12" style="text-align: center;">
+                                                {% if each %}
+                                                    <img src="{{host}}static/data/{{ each.split|join:"_" }}" id="post_img_media">
+                                                {% endif %}
+                                            </div>
+                                        {% endfor %}
+                                        <div class="col-sm-12" id="post_media_description">
+                                            <p>{{ post.description|safe }}</p>
+                                        </div>
+                                    </div>
+                                        <a href="{{ post.sourceUrl }}" id="post_media_source_url" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+                                        {% for tag in post.tags %}
+                                            <a href="{{ tags_page }}{{ tag }}" id="post_tag">#{{ tag }}</a>
+                                        {% endfor %}
+                                </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+
+{% include 'footer.html' %}

@@ -1,0 +1,35 @@
+		<div class="col-md-12 col-sm-12 col-xs-12 ">
+			<div class="container-fluid">
+				<div id="section_title">
+					<a href="/Movie"><h1>Movie</h1></a>
+				</div>
+			{% load template_tags %}
+				<div class="col-sm-12">
+					<div class="container-fluid">
+					  <div class="row">
+					    <div class="col-md-8 col-sm-11 col-xs-11" id="sections">
+						<div class="dummy"></div>
+						<a href="{{ host}}movie/#{{ movie_posts.0.id }}" class="thumbnail">
+							<h1>{{ movie_posts.0.title|no_single_quote }}</h1>
+							<img src="{{ host }}{{ movie_posts.0.thumbnail.split|join:"_" }}" style="width: 95%;">
+						</a>
+					    </div>
+					    <div class="col-md-4 col-sm-11 col-xs-11" id="sections">
+						<div class="dummy"></div>
+						<a href="{{ host}}movie/#{{ movie_posts.1.id }}" class="thumbnail">
+							<h1>{{ movie_posts.1.title|no_single_quote }}</h1>
+							<img src="{{ host }}{{ movie_posts.1.thumbnail.split|join:"_" }}" style="width: 95%;">
+						</a>
+					    </div>
+					    <div class="col-md-4 col-sm-11 col-xs-11" id="sections">
+						<div class="dummy"></div>
+						<a href="{{ host}}movie/#{{ movie_posts.2.id }}" class="thumbnail">
+							<h1>{{ movie_posts.2.title|no_single_quote }}</h1>
+							<img src="{{ host }}{{ movie_posts.2.thumbnail.split|join:"_" }}" style="width: 95%;">
+						</a>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
