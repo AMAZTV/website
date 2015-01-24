@@ -50,7 +50,8 @@ body {
 #social_icon{padding: 5px 5px 5px 5px; opacity: .8;}
 #contact_button{color: #0a0a0a; margin-bottom: 20px; margin-top: 20px; font-weight: 100; background-color: #fdfbff;}
 #thumbnail{z-index: -10; position: absolute; max-height:100%;}
-#about_amaztv h1{font-weight: 100;}
+#about_amaztv h1{font-weight: 100; font-size: 7vh; padding-left: 10%;}
+#about_amaztv p{font-weight: 200; margin-left: 20%; margin-right: 30%; font-size: 2vh; text-align: justify; margin-bottom: 50px;}
 #team{text-align: center;}
     #team h2{font-weight: 100;}
     #team p{font-weight: 200;}
