@@ -3,7 +3,9 @@
 {% include 'header.html' %}
 {% load template_tags %}
                         {% if error %}
-                            <h1>{{ error }}</h1>
+                            <div class="container-fluid" id="category_header">
+                            <h1 id="category_title">{{ error }}</h1>
+                            </div>
                         {% else %}
 			<div class="container-fluid" id="category_header">
 			    <div class="container-fluid">
